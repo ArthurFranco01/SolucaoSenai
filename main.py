@@ -29,7 +29,7 @@ while True:
 print("Sistema encerrado! Gerando relatório...")
 relatorio = CalcularMédia(ListaAluno)
 
-with open("relatorio_alunos.txt", "w", encoding="utf-8") as arquivo:
+with open("resultado.txt", "w", encoding="utf-8") as arquivo:
     for linha in relatorio:
         arquivo.write(linha + "\n")
 
