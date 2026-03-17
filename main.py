@@ -27,6 +27,10 @@ while True:
         print("digite 0 para encerrar o sistema e gerar relatório de sistema")
         print("Próximo Aluno....")
 print("Sistema encerrado! Gerando relatório...")
-CalcularMédia(ListaAluno)
+relatorio = CalcularMédia(ListaAluno)
+
+with open("relatorio_alunos.txt", "w", encoding="utf-8") as arquivo:
+    for linha in relatorio:
+        arquivo.write(linha + "\n")
 
 
